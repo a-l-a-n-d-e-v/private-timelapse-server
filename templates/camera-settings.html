@@ -1,0 +1,16 @@
+<label>Cámara:</label>
+<select name="camara" id="camaraSelect">
+    {% for c in camaras %}
+        <option value="{{c}}">Cámara {{c}}</option>
+    {% endfor %}
+</select>
+
+<label>Resolución:</label>
+<select name="resolucion" id="resolucionSelect">
+    <option value="">Resolución por defecto</option>
+</select>
+
+<label>Formato de Píxel:</label>
+<select name="pix_fmt" id="pixFmtSelect">
+    <option value="">Cargando...</option>
+</select>
