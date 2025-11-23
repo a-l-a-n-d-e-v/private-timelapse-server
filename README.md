@@ -2,6 +2,7 @@
 
 python3 -m venv web
 pip install -r requierements.txt
+mkdir logs resources
 
 # Start app
 ./automation/timelapse_service.sh
