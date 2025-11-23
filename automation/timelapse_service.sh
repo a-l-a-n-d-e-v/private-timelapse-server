@@ -1,16 +1,18 @@
 #!/bin/bash
-# Archivo: /home/orangepi/web_timelaps/automation/timelapse_service.sh
-# Propósito: Inicia los dos servicios Python (web principal y HTTP simple)
+# file: /home/orangepi/web_timelaps/automation/timelapse_service.sh
+# purpose: Start services in background (web server and simple http server)
 
-# Ir al directorio del proyecto
+# go to project directory
 cd "/home/orangepi/private-timelapse-server" || exit 1
 
-# Activar entorno virtual y ejecutar el servidor web principal
+# local virtual environment
 source web/bin/activate
+
 nohup python3 web_server.py > /home/orangepi/private-timelapse-server/logs/web_server.log 2>&1 &
 
-# Ir al directorio de recursos y ejecutar el servidor HTTP simple
+# share resources quick (temporary)
 cd "/home/orangepi/private-timelapse-server/resources" || exit 1
 nohup python3 -m http.server > /home/orangepi/private-timelapse-server/logs/http_server.log 2>&1 &
 
-echo "Servicios iniciados correctamente."
+echo "Service started."
+exit 0
