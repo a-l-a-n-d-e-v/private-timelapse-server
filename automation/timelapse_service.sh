@@ -3,7 +3,7 @@
 # Propósito: Inicia los dos servicios Python (web principal y HTTP simple)
 
 # Ir al directorio del proyecto
-cd "/home/orangepi//private-timelapse-server" || exit 1
+cd "/home/orangepi/private-timelapse-server" || exit 1
 
 # Activar entorno virtual y ejecutar el servidor web principal
 source web/bin/activate

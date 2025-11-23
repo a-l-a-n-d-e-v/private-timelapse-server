@@ -8,4 +8,4 @@ pkill -f "python3 web_server.py"
 # Buscar y detener el servidor HTTP simple
 pkill -f "python3 -m http.server"
 
-echo "Servicios detenidos correctamente."
+echo "Services stopped."
